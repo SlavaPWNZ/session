@@ -15,11 +15,9 @@
         <div class="box">
             <table>
                 <tbody>
-                    @foreach ($items as $item)
+                    @foreach ($times as $time)
                         <tr>
-                            <td><pre>{{ $item['position'] }}</pre></td>
-                            <td>{{ $item['title'] }}</td>
-                            <td>{{ $item['value'] }}</td>
+                            <td>{{ $time }}</td>
                         </tr>
                     @endforeach
                 </tbody>
