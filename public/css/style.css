@@ -1,0 +1,25 @@
+body {
+    background: #555;
+}
+
+.box
+{
+    width: 1000px;
+    padding:5px;
+    background-color:#f0f0f0;
+    border:2px solid #3e82da;
+    border-radius:5px;
+    margin: 100px auto;
+    padding-left: 30px;
+}
+
+td{
+    padding: 10px 50px 10px 0;
+    vertical-align: unset;
+}
+tr:nth-child(3){
+    white-space: nowrap;
+}
+pre{
+    font-size: 100%;
+}
