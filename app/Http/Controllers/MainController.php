@@ -20,6 +20,7 @@ class MainController extends Controller
                 })
                 ->get()
                 ->toArray();
+            $online = [];
             foreach ($opened_sessions as $os) {
                 if (!isset($online[$os['user_id']])) $online[$os['user_id']] = 0;
                 $online[$os['user_id']]++;
@@ -37,7 +38,7 @@ class MainController extends Controller
                 ->toArray();
             // select * from `session` where `login_time` > $date_start and `login_time` < $date_end or `logout_time` < $date_end and `logout_time` > $date_start order by `login_time` asc
             // Нашли сессии, которые созданы сегодня, либо завершаться сегодня
-
+            $times = [];
             foreach ($sessions_today as $st){
                 $times[$st['login_time']][$st['user_id']] = 1;
 
@@ -47,7 +48,7 @@ class MainController extends Controller
                     $times[$st['logout_time']][$st['user_id']] = -1;
                 }
             }
-            ksort($times);
+            if (!empty($times)) ksort($times);
 
             $check = 0;
             $result = [
