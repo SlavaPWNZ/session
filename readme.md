@@ -18,3 +18,5 @@ id, user_id, login_time, logout_time
 
 Пример запуска скрипта:
 http://session.test/2020-04-28
+
+![alt tag](example.png "Тестовый вариант")​
