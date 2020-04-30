@@ -15,3 +15,6 @@ id, user_id, login_time, logout_time
 4) php artisan migrate
 5) php artisan db:seed --class=SessionTableSeeder
 6) php artisan key:generate
+
+Пример запуска скрипта:
+http://session.test/2020-04-28

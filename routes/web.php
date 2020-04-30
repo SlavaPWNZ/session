@@ -1,2 +1,2 @@
 <?php
-Route::get('/', 'MainController@index');
+Route::get('/{date}', 'MainController@index');

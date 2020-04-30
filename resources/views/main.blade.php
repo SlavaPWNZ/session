@@ -13,11 +13,12 @@
 <body>
     <div id="editor">
         <div class="box">
+            Максимальный пик за <b>{{ $dates }}</b> составил <b>{{ $result['users'] }}</b> пользователя:
             <table>
                 <tbody>
-                    @foreach ($times as $time)
+                    @foreach ($result['times'] as $res)
                         <tr>
-                            <td>{{ $time }}</td>
+                            <td>{{ $res }}</td>
                         </tr>
                     @endforeach
                 </tbody>
